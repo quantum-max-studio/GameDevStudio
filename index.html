@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameGen Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gray: {
+                750: '#2d3748',
+                850: '#1a202c',
+                950: '#0d1117',
+              },
+              accent: {
+                500: '#6366f1',
+                600: '#4f46e5',
+              },
+              game: {
+                panel: '#1e1e1e',
+                dark: '#121212',
+                input: '#252526',
+                border: '#3e3e42',
+                text: '#cccccc'
+              }
+            },
+            fontFamily: {
+              mono: ['Fira Code', 'Consolas', 'Monaco', 'monospace'],
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #121212;
+        color: #e0e0e0;
+        overflow: hidden; /* Prevent full page scroll, handle in panels */
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e1e1e;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3e3e42;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4f46e5;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
